@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './shared/Button';
+import Button from '../shared/Button';
 
 const Table = styled.table`
   border-collapse: collapse;
@@ -18,7 +18,7 @@ const Table = styled.table`
   }
 `;
 
-const ExpensesTable = ({ items = [], onRemove }) => (
+const ExpensesTable = ({ items, onRemove }) => (
   <Table>
     <thead>
       <tr>

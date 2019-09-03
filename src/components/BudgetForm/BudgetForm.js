@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import Form from './shared/Form';
-import Label from './shared/Label';
-import Input from './shared/Input';
-import Button from './shared/Button';
+import Form from '../shared/Form';
+import Label from '../shared/Label';
+import Input from '../shared/Input';
+import Button from '../shared/Button';
+// import { setBudget } from '../../redux/BudgetForm/BudgetAction';
+// props.onSave(this.state.budget);
 
 const labelStyles = `
   margin-bottom: 16px;  
@@ -18,14 +20,21 @@ export default class BudgetForm extends Component {
   };
 
   handleSubmit = e => {
+    const { addBudget } = this.props;
+    const { budget } = this.state;
     e.preventDefault();
+    addBudget(budget);
+    this.reset();
+  };
 
-    this.props.onSave(this.state.budget);
-
-    this.setState({ budget: 0 });
+  reset = () => {
+    this.setState({
+      budget: 0,
+    });
   };
 
   render() {
+    console.log(this.props);
     return (
       <Form onSubmit={this.handleSubmit}>
         <Label customStyles={labelStyles}>
