@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 
 import './styles.css';
 
+//provider - add context to the application STORE
+
 ReactDOM.render(
   <Provider store={store}>
     <App />

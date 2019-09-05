@@ -1,9 +1,11 @@
 import ExpenseForm from './ExpenseForm';
 import { connect } from 'react-redux';
-import { addsExpenses } from '../../redux/expenseForm/expenseFormActions';
+import { addExpenses } from '../../redux/expenseForm/expenseFormActions';
+
+// connect to redux store
 
 const mapDispatchToProps = dispatch => ({
-  newExpenses: exp => dispatch(addsExpenses(exp)),
+  newExpenses: exp => dispatch(addExpenses(exp)),
 });
 
 export default connect(

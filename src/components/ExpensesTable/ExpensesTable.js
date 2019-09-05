@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from '../shared/Button';
 
+//adding data from props to the table
+//button onRemuve for delete transactions
+
 const Table = styled.table`
   border-collapse: collapse;
   text-align: center;

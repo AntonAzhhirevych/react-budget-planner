@@ -1,4 +1,4 @@
-import Type from '../Type';
+import Type from '../values/Type';
 
 const budgetFormReducer = (state = 0, { type, payload }) => {
   switch (type) {

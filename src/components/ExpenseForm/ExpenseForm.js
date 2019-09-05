@@ -9,6 +9,9 @@ const labelStyles = `
   margin-bottom: 16px;  
 `;
 
+//1-add a Expence from the form to local state
+//2-through props we transfer data to the ExpenceFormContainer
+
 export default class ExpenseForm extends Component {
   state = {
     name: '',

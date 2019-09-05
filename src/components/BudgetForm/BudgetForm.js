@@ -3,12 +3,13 @@ import Form from '../shared/Form';
 import Label from '../shared/Label';
 import Input from '../shared/Input';
 import Button from '../shared/Button';
-// import { setBudget } from '../../redux/BudgetForm/BudgetAction';
-// props.onSave(this.state.budget);
 
 const labelStyles = `
   margin-bottom: 16px;  
 `;
+
+//1-add a budget from the form to local state
+//2-through props we transfer data to the BudegetFormContainer
 
 export default class BudgetForm extends Component {
   state = { budget: 0 };
@@ -34,7 +35,6 @@ export default class BudgetForm extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <Form onSubmit={this.handleSubmit}>
         <Label customStyles={labelStyles}>
